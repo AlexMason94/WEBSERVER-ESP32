@@ -1,0 +1,318 @@
+
+
+
+#body{
+  background: url(../images/fondo.jpg);
+  background-size: 100%;
+}
+
+.servicios {
+
+    color: #173A67;
+    padding: 20px;
+    text-align: center;
+    font-family: Poppins Medium;
+    font-size: 15px;
+
+}
+
+.servicios h1 {
+    margin-bottom: 20px;
+}
+
+
+
+.svg{
+width: 15%;
+padding-bottom: 3%;
+}
+
+
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-content: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .shape {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(157, 38, 38);
+    transition: background-image 0.3s ease;
+  }
+  
+  .shape:hover {
+    background-image: url(../images/jugo.jpg);
+  }
+  
+  .icon-text {
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .icon-text svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon-text h2 {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  
+  .icon-text p {
+    font-size: 10px;
+    margin: 5px 0;
+  }
+  #shape1{
+    width: 40px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+.seccion_menu{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat, repeat;
+    margin: auto;
+    overflow: hidden;
+}
+.galeria{
+    width: 80%;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.galeria .container{
+    display: inline-block;
+    vertical-align: middle;
+}
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin:  20px;
+}
+.titulomenu{
+    
+    font-size: 30px;
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.text0 {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom:  15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Poppins;
+    font-weight: bold;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.4);
+}
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0;
+}
+.text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Poppins;
+    font-weight: bold;
+}
+.text2 {
+    color: white;
+    font-size: 14px;
+    position: center;
+    font-family: Poppins Medium;
+    padding: 43px;
+
+}
+.overlayFade{
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(157, 38, 38);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.container:hover .overlay,.container:hover .overlayFade {
+    opacity: 1;
+    transition: 0.8s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor del switch */
+.contenedor-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ccc;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Añadir para evitar que el contenido se desborde */
+}
+
+/* Input del switch */
+#interruptor {
+  display: none;
+}
+
+/* Etiqueta del switch */
+.interruptor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #6c757d; /* Color de fondo inicial para "Cerrado" */
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Estados del interruptor */
+.estado-cerrado, .estado-abierto {
+  color: white;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+/* Inicialmente oculto el estado "Abierto" */
+.estado-abierto {
+  opacity: 0;
+  background-color: #4caf50;
+}
+
+/* Switch activado */
+#interruptor:checked + .interruptor {
+  background-color: #4caf50; /* Color de fondo para "Abierto" */
+}
+
+/* Estado abierto activado */
+#interruptor:checked + .interruptor .estado-abierto {
+  opacity: 1; /* Mostrar estado "Abierto" */
+}
+
+/* Estado cerrado desactivado */
+#interruptor:checked + .interruptor .estado-cerrado {
+  opacity: 0; /* Ocultar estado "Cerrado" */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
