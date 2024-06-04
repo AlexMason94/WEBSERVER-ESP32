@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Servicio de Domotica Responsive</title>
+    <link rel="icon" type="images/ico" href="images/fav.png">
+    <meta name="viewport" content="width=device-width; charset=UTF-8 , initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/contacto.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .contenedor {
+            justify-content: center;
+            padding-top: 150px;
+
+
+        }
+    </style>
+</head>
+
+<body bgcolor="#ededed" id="body">
+
+
+    <div class="contenedor">
+
+        <form id="loginForm">
+
+            <img src="images/responsive.svg" class="svg">
+            <div class="titulosbg">Inicio de sesi&oacute;n</div>
+
+            <p>Usuario: </p>
+            <input type="text" name="username" class="field" required="required"> <br />
+
+            <p>Contrase&ntildea: </p>
+            <input type="password" name="password" class="field" required="required"> <br />
+            <p class="center-content">
+                <input type="button" class="btn" value="Ingresar" onclick="login()">
+            </p>
+
+        </form>
+    </div>
+
+    <!-- Modal de Alerta para Usuarios No-Admin -->
+    <div id="alertModal"
+        style="display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 1000;">
+        <h2>Acceso Restringido</h2>
+        <p>Lo sentimos, no tienes permiso para acceder a esta sección.</p>
+        <button onclick="closeAlertModal()">Cerrar</button>
+    </div>
+
+
+
+
+    </div>
+    <!--contacto-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

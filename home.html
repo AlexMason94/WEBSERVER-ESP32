@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, charset=UTF-8 , initial-scale=1.0">
+    <title>Panel Administrativo</title>
+    <link rel="stylesheet" href="css/listasr.css">
+</head>
+<body>
+    <h1>Bienvenido al Panel Administrativo</h1>
+    <button onclick="openModal()" style="position: absolute; right: 20px; top: 20px;">Añadir Usuario</button>
+    <table id="usersTable" border="1" style="width:100%; text-align:left;">
+        <!-- Las filas se añadirán dinámicamente aquí -->
+        
+    </table>
+    
+        <button onclick="logout()" class="logoutButton">Cerrar Sesión</button>
+   
+    <!-- Modal para añadir usuario -->
+    <div id="addUserModal" style="display:none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <h2>Añadir Nuevo Usuario</h2>
+        <input type="text" id="newUsername" placeholder="Nombre de usuario"><br>
+        <input type="password" id="newPassword" placeholder="Contraseña"><br>
+        <select id="newRole">
+            <option value="admin">admin</option>
+            <option value="operator">operador</option>
+        </select><br>
+        <button onclick="addUser()" id="guardar">Guardar Usuario</button>
+        <button onclick="closeModal()" id="cancelar">Cancelar</button>
+    </div>
+   
+    <!-- Modal de edición -->
+    <div id="editUserModal" style="display:none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+    <h2>Editar Usuario</h2>
+    <form id="editUserForm">
+        <input type="hidden" id="editUserId">
+        <input type="text" id="editUsername" placeholder="Nuevo Usuario"><br>
+        <input type="password" id="editPassword" placeholder="Nueva contraseña"><br>
+        <select id="editRole">
+            <option value="admin">admin</option>
+            <option value="operator">operador</option>
+        </select><br>
+        <button type="button" onclick="updateUser()" id="guardar">Actualizar Usuario</button>
+        <button type="button" onclick="closeEditModal()" id="cancelar">Cancelar</button>
+    </form>
+
+    <!-- Modal de baja logica -->
+    <div id="optionsModal">
+    <h2>Opciones de Usuario</h2>
+    <p id="modalMessage">¿Qué acción deseas realizar?</p>
+    <button onclick="deactivateUser()">Inhabilitar</button>
+    <button onclick="activateUser()">Reactivar</button>
+    <button onclick="closeOptionsModal()">Cancelar</button>
+    <input type="hidden" id="currentUser">
+    </div>
+
+</div>
+    <!-- Contenido del panel administrativo aquí -->
+<!-- Editar usuarios -->
+    <script src="js/edit.js"></script>  
+    <!-- Script para listar usuarios -->
+    <script src="js/listar.js"></script>
+    <!-- Script para modal- add user -->
+    <script src="js/add.js"></script>
+    <!-- Script para modal- baja logica -->
+    <script src="js/delete.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

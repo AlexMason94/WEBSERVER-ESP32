@@ -1,0 +1,103 @@
+table {
+    width: 100%;
+    border-collapse: collapse; /* Los bordes de la tabla se colapsan en uno solo */
+}
+th, td {
+    padding: 8px; /* Espaciado dentro de las celdas */
+    text-align: left; /* Alineación del texto en las celdas */
+    border-bottom: 1px solid #ddd; /* Línea de separación entre filas */
+}
+th {
+    background-color: #f2f2f2; /* Color de fondo para los encabezados de la tabla */
+}
+tr:hover {background-color: #f5f5f5;} /* Efecto al pasar el mouse sobre las filas */
+
+button { margin: 10px 0; width: 15%; padding: 8px; }
+
+#newUsername{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#newPassword{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#cancelar{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#guardar{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#newRole{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+.edit-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar color */
+    width: auto;
+    height: auto;
+}
+
+.edit-button:hover {
+    background-color: #367c39; /* Color más oscuro al pasar el mouse */
+}
+#icono-edit{
+    height: 10%;
+    width: 10%;
+}
+#editUsername{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#editPassword{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#editRole{
+    width: auto;
+    padding: 8px;
+    margin: 10px
+}
+#optionsModal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000; /* Asegura que el modal está por encima de otros elementos */
+}
+.logoutButton{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background-color: #ba006d;
+    color: white; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 65%;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+.logoutButton:hover {
+    background-color: darkred; /* Color más oscuro al pasar el ratón */
+}
